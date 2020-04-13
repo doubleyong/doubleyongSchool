@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid red; */
+        }
+        .current {
+            background-color: #7678db;
+        }
+        .Promotion-a {
+            background-color:#272b48;
+            height: 80px;
+            width: 100%;
+        }
+        .Promotion-a h1 {
+            color: #ffffff;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .banner-p {
+            background-color:#eaedfd;
+            width: 100%;
+            height: 80px;
+        }
+        .on {
+            background-color: #7678db;
+            line-height: 40px;
+        }
+        ul {
+            list-style-type: none;
+            text-align: center;
+            font-size: 14px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+
+        }
+        li {
+            display: inline-block;
+            display: row;
+            width: 80px;
+            height: 40px;
+            background-color: #b5b5b5;
+            padding: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        a:link,a:hover,a:visited,a:active {
+            color:#ffffff;
+            text-decoration: none;
+        }
+        .banner-p a {
+            display: block;
+            text-align: center;
+        }
+
+        .show ,.hide{
+            height: 800px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .show span ,.teammembers-p span ,.vip-s{
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .available ,.member {
+            margin: 10px auto;
+            font-size: 14px;
+        }
+        .receive {
+            height: 40px;
+            width: 100%;
+            background-color: #7678db;
+            color:#ffffff;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px auto;
+        }
+        .border-p,.mycommission-border,.team-p, .vip-border {
+            border-collapse: collapse;
+            /* table-layout: fixed; */
+            font-size: 10px;
+            width: 100%;
+        }
+        th ,td {
+            height: 20px;
+            /* width: 25%; */
+        }
+        .share-p .win-p .copy-p {
+            font-size: 14px;
+        }
+        .win-p,.http-p,.page-p ,.note,.ret, .noli{
+            color:#7678db;
+        }
+        .http-p {
+            margin-top: 0px !important;
+        }
+        .lianxi-p {
+            text-align: center;
+            margin-top: 40px;
+
+        }
+        .lianxi-p img {
+            width:80px;
+            height: 80px;
+            margin: 0 30px;
+        }
+        /* mycommission */
+        .mycommission-btn,.teammember-btn {
+            width: 176px;
+            float: right;
+            right: 0px;
+            margin-top: 5px;
+        }
+        .previous,.next {
+            width: 64px;
+            height: 30px;
+            background-color: #7678db;
+            font-size: 14px;
+            color: #ffffff;
+            border-radius: 6px;
+        }
+        .page-p {
+            font-size:12px;
+            margin: 0 10px;
+        }
+        /* teammembers */
+        .input-mi {
+            border-radius: 10px;
+            font-size: 8px;
+            height: 26px;
+            width: 200px;
+            margin-left: 10px;
+        }
+        .inquire {
+            color: #7678db;
+            border-radius: 10px;
+            width: 80px;
+            height: 26px;
+            margin-left: 10px;
+        }
+        .team-p ,.vip-border {
+            margin-top: 20px;
+        }
+        .note {
+            font-size: 6px;
+            margin: 10px auto;
+        }
+        .returning {
+            height: 80px;
+            background-color: #eaedfb;
+            text-align: center;
+            margin: 10px auto;
+        }
+        .ret {
+            font-size: 20px;
+        }
+        .noli {
+            font-size:14px
+        }
+        .renxiang li{
+            background-color: #7678db;
+            width: 80px;
+            height: 30px;
+            border-radius: 10px;
+        }
+        .jishuan ,.jieguo {
+            border: 1px solid red;
+        }
+        .jishuan {
+            width: 360px;
+            height: 40px;
+            float: left;
+            position: relative;
+        }
+        .jieguo {
+            width: 100px;
+            height: 40px;
+            float: right;
+        }
+        .click {
+            height: 40px;
+            width: 100%;
+            background-color: #7678db;
+            color:#ffffff;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px auto;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!-- promation -->
+
+<div class="Promotion-banner">
+    <div class="Promotion-a">
+        <h1>
+            Promotion
+        </h1>
+    </div>
+    <div id="main">
+        <div class="banner-p">
+            <ul id="menu">
+                <li class="on" data-id="1"><a href="#">Promotion</a></li>
+                <li class="off" data-id="2"><a href="#">My Commission</a></li>
+                <li class="off" data-id="3"><a href="#">Team Members</a></li>
+                <li class="off" data-id="4"><a href="#">VIP Level</a></li>
+            </ul>
+        </div>
+        <!-- promotion -->
+        <div class="show" id="content_1">
+            <span>My invitation code:     </span>
+            <span>Name:     </span>
+            <p class="available">Available Withdrawal Commission:</p>
+            <p class="receive">Receive Commission</p>
+
+            <table border="1"class="border-p">
+                <tr>
+                    <th>Cumulative Commission</th>
+                    <th>Available Commissions Today</th>
+                    <th>Personal Performace</th>
+                    <th>Team Performace</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <span class="share-p">Share with your friends: <span class="win-p"> Win 1,000,000 coins</span></span>
+            <div class="lianxi-p">
+                <img src="{$Think.config.itemName}/static/H5/image/home/FaceBook.png" />
+
+                <img src="{$Think.config.itemName}/static/H5/image/home/WhatsApp.png" />
+            </div>
+            <span class="copy-p">Copy your unique URL and send it to friend:</span>
+            <span class="http-p">http:www.agbgame.com/game/register?GameID=11000001</span>
+            <p class="receive">Copy URL</p>
+        </div>
+    </div>
+
+    <!-- mycommission -->
+    <div class="hide" id="content_2">
+        <span>My invitation code:     </span>
+        <span>Name:     </span>
+        <p class="available">Available Withdrawal Commission:</p>
+        <p class="receive">Receive Commission</p>
+        <table border="1"class="mycommission-border">
+            <tr>
+                <th>Cumulative Commission</th>
+                <th>Available Commissions Today</th>
+                <th>Personal Performace</th>
+                <th>Team Performace</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="mycommission-btn">
+            <button class="previous">Previous</button><a class="page-p">2/22</a><button class="next">Next</button>
+        </div>
+    </div>
+
+    <!-- Team Members -->
+    <div class="hide" id="content_3">
+        <span>Numbers of Team:     </span></br>
+        <a class="member">Member induiry:</a>
+        <input type="search" autocomplete="off" placeholder=".....Please enter the VIP ID" class="input-mi">
+        <button class="inquire">Inquire</button>
+
+        <table border="1"class="team-p">
+            <tr>
+                <th>Cumulative Commission</th>
+                <th>Available Commissions Today</th>
+                <th>Personal Performace</th>
+                <th>Team Performace</th>
+                <th>Available Commissions Today</th>
+                <th>Personal Performace</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+        </table>
+        <div class="teammember-btn">
+            <button class="previous">Previous</button><a class="page-p">2/2</a><button class="next">Next</button>
+        </div>
+    </div>
+    <!-- VIP LEVEL -->
+    <div class="hide" id="content_4">
+        <span class="vip-s">VIP Promotion Criteria and Commission Ratia</span>
+        <table border="1"class="vip-border">
+            <tr>
+                <th>VIP Leval</th>
+                <th>Turnover/Day</th>
+                <th>Commission/10K</th>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <p class="note">Note:the above table is 0-4000,and the performance is 3999Coins,excluding 4000,and so on.</p>
+        <div class="returning">
+            <p class="ret">Returning Commission Process</p>
+            <p class=noli>No limit on the number of team</p>
+            <p class=noli>no limit on the amount of commission</p>
+        </div>
+        <div class="example">
+            Example 1:A's total performance of this week is 2.2Coins million,among which,A's self-operated performance is 0.4Coins Million,
+            and the performance of his direct agents B1 and B2 are 0.7Coins Million and 1.1Coins million respectively.So how much commission can
+            A earn this week?
+        </div>
+        <div class="renxiang">
+            <ul>
+                <li>A</li>
+                <li>B1</li>
+                <li>B2</li>
+                <li>A</li>
+            </ul>
+        </div>
+        <!-- <div class="jishuan">100x0.4M + ( 100 - 80 )x 0.7M +(100-90)X1.1M</div>
+        <div class="jieguo">=65M Coins</div> -->
+        <p class="click">Click for more</p>
+    </div>
+</div>
+<script>
+    window.onload =function(){
+        var main=document.getElementById("main");
+        var oul=main.getElementsByTagName("ul")[0];
+        var lists =oul.getElementsByTagName("li");
+        // var divs=main.getElementsByTagName("div");
+        for(var i =0;i<lists.length;i++){
+            lists[i].onclick= function (e) {
+                var id =this.getAttribute("data-id");
+                for (var i=0;i<lists.length;i++){
+                    lists[i].className='';
+                    document.getElementById("content_1").className="hide";
+                    document.getElementById("content_2").className="hide";
+                    document.getElementById("content_3").className="hide";
+                    document.getElementById("content_4").className="hide";
+                }
+                this.className="current";
+                document.getElementById("content_"+id).className="show";
+            }
+        }
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
